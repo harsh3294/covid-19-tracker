@@ -37,20 +37,20 @@ body {
 .app__left {
   flex: 0.9;
 }
-.app__right{
+.app__right {
   display: flex;
   flex-direction: column;
 }
 
-.app__right > .MuiCardContent--root{
+.app__right > .MuiCardContent--root {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
-.app__graph{
+.app__graph {
   flex-grow: 1;
 }
-.app__graphTitle{
+.app__graphTitle {
   margin-top: 20px;
 }
 .app__information > h3 {
@@ -67,5 +67,8 @@ body {
 @media (max-width: 990px) {
   .app {
     flex-direction: column;
+  }
+  .app__right {
+    margin-top: 10px;
   }
 }
