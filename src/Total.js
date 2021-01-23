@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import "./Total.css";
 import { makeStyles } from "@material-ui/core";
 import clsx from "clsx";
+import numeral from "numeral";
 
 export default function HeaderColumnsGrid() {
   const [rows, setRows] = useState([]);
@@ -170,22 +171,30 @@ export default function HeaderColumnsGrid() {
           const rows = data.map((country) => ({
             id: country.updated,
             country: country.country,
-            totalCases: country.cases,
-            newCases: country.todayCases,
-            newDeaths: country.todayDeaths,
-            totalDeaths: country.deaths,
-            newRecovered: country.todayRecovered,
-            totalRecovered: country.recovered,
-            activeCases: country.active,
-            criticalCases: country.critical,
-            casesPer1Million: country.casesPerOneMillion,
-            deathsPer1Million: country.deathsPerOneMillion,
-            totalTests: country.tests,
-            testsPer1Million: country.testsPerOneMillion,
-            activePer1Million: country.activePerOneMillion,
-            recoveredPer1Million: country.recoveredPerOneMillion,
-            criticalPer1Million: country.criticalPerOneMillion,
-            Population: country.population,
+            totalCases: numeral(country.cases).format("0,0"),
+            newCases: numeral(country.todayCases).format("0,0"),
+            newDeaths: numeral(country.todayDeaths).format("0,0"),
+            totalDeaths: numeral(country.deaths).format("0,0"),
+            newRecovered: numeral(country.todayRecovered).format("0,0"),
+            totalRecovered: numeral(country.recovered).format("0,0"),
+            activeCases: numeral(country.active).format("0,0"),
+            criticalCases: numeral(country.critical).format("0,0"),
+            casesPer1Million: numeral(country.casesPerOneMillion).format("0,0"),
+            deathsPer1Million: numeral(country.deathsPerOneMillion).format(
+              "0,0"
+            ),
+            totalTests: numeral(country.tests).format("0,0"),
+            testsPer1Million: numeral(country.testsPerOneMillion).format("0,0"),
+            activePer1Million: numeral(country.activePerOneMillion).format(
+              "0,0"
+            ),
+            recoveredPer1Million: numeral(
+              country.recoveredPerOneMillion
+            ).format("0,0"),
+            criticalPer1Million: numeral(country.criticalPerOneMillion).format(
+              "0,0"
+            ),
+            Population: numeral(country.population).format("0,0"),
           }));
           //   setId(id + 1);
           setRows(rows);

@@ -4,6 +4,7 @@
 //https:disease.sh/v3/covid-19/all
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import Divider from "@material-ui/core/Divider";
 import {
   MenuItem,
   FormControl,
@@ -19,6 +20,7 @@ import numeral from "numeral";
 import Map from "./Map";
 import "leaflet/dist/leaflet.css";
 import Total from "./Total";
+import Vaccine from "./Vaccine";
 
 const App = () => {
   const [country, setInputCountry] = useState("worldwide");
@@ -138,12 +140,19 @@ const App = () => {
             <div className="app__information">
               <h3>Live Cases by Country</h3>
               <Table countries={tableData} />
+              <br />
+              <Divider />
               <h3 className="app__graphTitle">Worldwide new {casesType}</h3>
               <LineGraph className="app__graph" casesType={casesType} />
+              <br />
+              <Divider />
+              <h3>Vaccine</h3>
+              <Vaccine />
             </div>
           </CardContent>
         </Card>
       </div>
+      <Divider light />
       <div className="app__total">
         <Total />
       </div>
