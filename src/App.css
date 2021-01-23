@@ -9,7 +9,8 @@ body {
 .app {
   display: flex;
   justify-content: space-evenly;
-  background-color: #f5f6fa;
+  /* background-color: #f5f6fa; */
+  background-color: black;
   padding: 20px;
 }
 
@@ -62,6 +63,10 @@ body {
 
 .app__information > h3:last-of-type {
   margin-top: 1rem;
+}
+.app__total {
+  padding: 15px;
+  background-color: black;
 }
 
 @media (max-width: 990px) {
