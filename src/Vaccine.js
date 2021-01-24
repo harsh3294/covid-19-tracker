@@ -36,7 +36,6 @@ function Vaccine() {
 
     getCountriesData();
   }, []);
-  console.log(tableData);
 
   return (
     <div className="table">
