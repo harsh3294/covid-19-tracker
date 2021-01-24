@@ -14,6 +14,7 @@ import {
 } from "@material-ui/core";
 import InfoBox from "./InfoBox";
 import LineGraph from "./LineGraph";
+import LineGraphVaccine from "./LineGraphVaccine";
 import Table from "./Table";
 import { sortData, prettyPrintStat } from "./util";
 import numeral from "numeral";
@@ -152,6 +153,10 @@ const App = () => {
           </CardContent>
         </Card>
       </div>
+      {/* <Divider light />
+      <div className="app__vaccineGraph">
+        <LineGraphVaccine className="app__graph" />
+      </div> */}
       <Divider light />
       <div className="app__total">
         <Total />
