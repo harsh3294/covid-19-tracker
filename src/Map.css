@@ -29,10 +29,11 @@
 }
 
 .info-flag {
-  height: 80px;
+  height: 130px;
   width: 100%;
   background-size: cover;
   border-radius: 8px;
+  border: 0.5px solid rgba(0, 0, 0, 0.5);
 }
 
 .info-confirmed,
