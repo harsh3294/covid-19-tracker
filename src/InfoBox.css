@@ -10,7 +10,9 @@
 .infoBox--selected {
   border-top: 10px solid greenyellow;
 }
-
+.MuiCardContent-root {
+  padding: 10px !important;
+}
 .infoBox--red {
   border-color: red;
 }
@@ -21,9 +23,10 @@
 
 .infoBox__cases {
   color: #cc1034;
-  font-weight: 600;
-  font-size: 1.75rem;
+  font-weight: 400;
+  font-size: 1.6rem;
   margin-bottom: 0.5rem;
+  margin-right: 0.1rem;
 }
 
 .infoBox__total {
