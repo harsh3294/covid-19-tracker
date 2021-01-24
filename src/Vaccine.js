@@ -23,9 +23,7 @@ function Vaccine() {
   var date = mm + "/" + dd + "/" + yyyy;
   useEffect(() => {
     const getCountriesData = async () => {
-      fetch(
-        "https://disease.sh/v3/covid-19/vaccine/coverage/countries?lastdays=1"
-      )
+      fetch("https://disease.sh/v3/covid-19/vaccine/coverage/countries")
         .then((response) => response.json())
         .then((data) => {
           const countries = data.map((country) => ({
